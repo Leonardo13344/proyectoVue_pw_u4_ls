@@ -58,11 +58,11 @@ export default {
     },
     async actualizar(body){
       await actualizarEmpleado(body);
-    }
+    },
   },
   mounted(){
     
-      const empl= {
+      /*const empl= {
       'id':0,
       'nombre':'leonardo',
       'apellido':'suniga',
@@ -71,7 +71,7 @@ export default {
     
     this.insertar(empl);
 
-    this.buscar(0);
+    this.buscar(0);*/
 
     const empl2= {
       'id':0,
@@ -82,7 +82,7 @@ export default {
 
       this.actualizar(empl2);
 
-      const empl3= {
+      /*const empl3= {
       'id':1,
       'nombre':'Pa Eliminar',
       'apellido':'suniga',
@@ -90,7 +90,7 @@ export default {
       'salario':20};
 
       this.insertar(empl3);
-      this.eliminar(1);
+      this.eliminar(1);*/
   }
 };
 </script>

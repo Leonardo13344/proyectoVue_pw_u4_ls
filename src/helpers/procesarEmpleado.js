@@ -1,6 +1,6 @@
 
 import axios from 'axios'
-const obtenerEmpleado = async (id) => {
+export const obtenerEmpleado = async (id) => {
     return await obtenerEmpleadoAxios(id);
 }
 
@@ -22,10 +22,11 @@ const obtenerEmpleadoAxios = async(id) => {
 
 //POST
 const insertarEmpleadoAxios = async(body1) => {
-    axios.post(`http://localhost:8085/APINomina/V1/empleados`,body1)
+    const data = axios.post(`http://localhost:8085/APINomina/V1/empleados`,body1).then(r=> r.data)
+    return data
 }
 
-const insertEmpleado = async(body) => {
+export const insertEmpleado = async(body) => {
     return await insertarEmpleadoAxios(body);
 }
 
@@ -36,7 +37,7 @@ const actualizarEmpleadoAxios = async(body) => {
     return data
 }
 
-const actualizarEmpleado = async(body) => {
+export const actualizarEmpleado = async(body) => {
     return await actualizarEmpleadoAxios(body);
 }
 
@@ -47,10 +48,10 @@ const borrarEmpleadoAxios = async(id) => {
     return data
 }
 
-const borrarEmpleado = async(id) => {
+export const borrarEmpleado = async(id) => {
     return await borrarEmpleadoAxios(id);
 }
 
 
-export {obtenerEmpleado, borrarEmpleado, actualizarEmpleado, insertEmpleado};
+
 
